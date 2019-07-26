@@ -14,21 +14,21 @@ namespace ColoudDelUReceOrderTool
 
             var resultMessage = string.Empty;
 
-            //定义获取表头信息对像
-            var docScddIds1 = View.Model.DataObject;
-            //获取表头中单据编号信息(注:这里的BillNo为单据编号中"绑定实体属性"项中获得)
-            var dhstr = docScddIds1["BillNo"].ToString();
-
-            fcy.Service.CnnStr = "http://172.16.4.252/websys/service.asmx";
-            fcy.Service.userdmstr = "feng";
-            fcy.Service.passwordstr = "";
-
-            //将获取的单据名称进行截取,取前两位
-            var orderno = dhstr.Substring(0, 2);
-
             //删除U订货单据(除退款单外使用)
             if (e.BarItemKey == "tbDelUOrderR")
             {
+                //定义获取表头信息对像
+                var docScddIds1 = View.Model.DataObject;
+                //获取表头中单据编号信息(注:这里的BillNo为单据编号中"绑定实体属性"项中获得)
+                var dhstr = docScddIds1["BillNo"].ToString();
+
+                fcy.Service.CnnStr = "http://172.16.4.252/websys/service.asmx";
+                fcy.Service.userdmstr = "feng";
+                fcy.Service.passwordstr = "";
+
+                //将获取的单据名称进行截取,取前两位
+                var orderno = dhstr.Substring(0, 2);
+
                 //根据获取的标记分别进行单据删除
                 switch (orderno)
                 {

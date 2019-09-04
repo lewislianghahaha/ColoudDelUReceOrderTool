@@ -23,7 +23,7 @@ namespace ColoudDelUReceOrderTool
         }
 
         /// <summary>
-        /// 删除付款单
+        /// U订货收款单删除(K3对应:收款退款单,其他应收单,应收单)
         /// </summary>
         /// <param name="cOutSysKey"></param>
         /// <returns></returns>

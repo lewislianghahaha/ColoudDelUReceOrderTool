@@ -9,7 +9,7 @@ namespace ColoudDelUReceOrderTool
     public class FcyUdhPosts
     {
         /// <summary>
-        /// 删除U订货上的"退款单"(K3对应:收款退款单 及 其他应收单)
+        /// 删除U订货上的"退款单"(K3对应:收款退款单,其他应收单,应收单)
         /// </summary>
         /// <param name="cOutSysKey"></param>
         /// <returns></returns>

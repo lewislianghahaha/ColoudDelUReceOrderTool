@@ -43,11 +43,23 @@ namespace ColoudDelUReceOrderTool
                     //应收单
                     case "AR":
                         resultMessage = DelReturnOrder(dhstr);
+                        //更新应收单F_YTC_COMBO=0
+                        UpdateK3(dhstr);
                         break;
                 }
                 //输出结果
                 View.ShowMessage(resultMessage);
             }
+        }
+
+        /// <summary>
+        /// 更新记录
+        /// </summary>
+        /// <param name="orderno"></param>
+        private void UpdateK3(string orderno)
+        {
+            var generate=new Generate();
+            generate.UpdateK3Record(orderno);
         }
 
         /// <summary>

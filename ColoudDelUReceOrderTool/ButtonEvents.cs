@@ -44,7 +44,7 @@ namespace ColoudDelUReceOrderTool
                     case "AR":
                         resultMessage = DelReturnOrder(dhstr);
                         //更新应收单F_YTC_COMBO=0
-                        UpdateK3(dhstr);
+                        //UpdateK3(dhstr);
                         break;
                 }
                 //输出结果
